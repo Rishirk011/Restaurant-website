@@ -1,0 +1,45 @@
+:root{
+    --color1:#CD1C18;
+    --color2:#FFA896;
+    --color3:#9B1313;
+    --color4:#38000A;
+}
+.hero-section{
+    background-image: linear-gradient(rgba(0,0,0,0.7)),  
+    url("/public/food/four.jpeg");
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hero-content{
+    background-color: transparent;
+    padding: 1.5rem;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+}
+.hero-section .hero-content h1{
+    font-size: 4rem;
+    color: white;
+}
+@media (max-width:400px){
+
+    .hero-content{
+        width: 90%;
+        padding: 1rem;
+    }
+    .hero-content h1{
+        text-align: center;
+        font-size: 2.3rem !important;
+        margin-bottom: 1rem;
+    }
+
+    .btn-section{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    
+}
