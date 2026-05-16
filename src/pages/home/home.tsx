@@ -1,5 +1,5 @@
 import "./home.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <>
@@ -27,7 +27,8 @@ export default function Home() {
           <h1>Featured Foods</h1>
           <div className="row g-4 justify-content-center my-3">
             <div className="col-12 col-md-6 col-lg-3">
-              <div className="card h-100">
+              <div className="card h-100 shadow shadow-md
+              shadow-dark">
                 <p
                   className="card-title display-5
                         text-center"
@@ -50,7 +51,8 @@ export default function Home() {
               </div>
             </div>
             <div className="col-12 col-md-6 col-lg-3 ">
-              <div className="card h-100">
+              <div className="card h-100 shadow shadow-md
+              shadow-dark">
                 <p
                   className="card-title display-5
                         text-center"
@@ -72,12 +74,13 @@ export default function Home() {
               </div>
             </div>
             <div className="col-12 col-md-6 col-lg-3 text-center">
-              <div className="card h-100">
+              <div className="card h-100 shadow shadow-md
+              shadow-dark">
                 <p
                   className="card-title display-5
                         text-center"
                 >
-                  The Whopper
+                  Whopper
                 </p>
                 <div className="card-body">
                   <img
@@ -94,22 +97,21 @@ export default function Home() {
               </div>
             </div>
             <div className="col-12 col-md-6 col-lg-3 text-center">
-              <div className="card h-100">
+              <div className="card h-100 shadow shadow-md
+              shadow-dark">
                 <p
                   className="card-title display-5
                         text-center"
                 >
-                  The Whopper
+                  Juicy Lucy
                 </p>
                 <div className="card-body">
                   <img
-                    src="/public/food/one.jpeg"
+                    src="/public/food/12.jpeg"
                     alt=""
                     className="img-fluid rounded"
                   />
-                  <p>
-                    Known for its flame-grilled beef patty, topped with
-                    tomatoes, lettuce, mayonnaise, ketchup, pickles, and onions.
+                  <p>A Minnesota-born cheeseburger with cheese stuffed inside the meat patty rather than on top, creating a molten, gooey core.
                   </p>
                   <button className="btn btn-success text-center">Add</button>
                 </div>
@@ -117,7 +119,93 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="container-fluid review p-5">
+          <h1>Reviews</h1>
+          <div className="row g-3 my-3">
+            <div className="col-12 col-md-6 col-lg-3
+            text-center">
+              <div className="card h-100 shadow shadow-md
+              shadow-dark">
+                <div className="card-body">
+                  <img src="/public/img/1.jpg" alt="" className="img-fluid rounded"/>
+                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">Alexa</p>
+                  <p className="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repellendus iure, dolores porro nisi facilis accusantium.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-6 col-lg-3
+            text-center">
+              <div className="card h-100 shadow shadow-md
+              shadow-dark">
+                <div className="card-body">
+                  <img src="/public/img/4.jpg" alt="" className="img-fluid rounded"/>
+                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">Alexa</p>
+                  <p className="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repellendus iure, dolores porro nisi facilis accusantium.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-6 col-lg-3
+            text-center">
+              <div className="card h-100 shadow shadow-md
+              shadow-dark">
+                <div className="card-body">
+                  <img src="/public/img/6.jpg" alt="" className="img-fluid rounded"/>
+                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">Alexa</p>
+                  <p className="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repellendus iure, dolores porro nisi facilis accusantium.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-6 col-lg-3
+            text-center">
+              <div className="card h-100 shadow shadow-md
+              shadow-dark">
+                <div className="card-body">
+                  <img src="/public/img/5.jpg" alt="" className="img-fluid rounded"/>
+                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">Alexa</p>
+                  <p className="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repellendus iure, dolores porro nisi facilis accusantium.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
+      <footer>
+        <div className="container-fluid">
+          <div className="row p-3">
+            <div className="col d-flex 
+            justify-content-center about-sec">
+                <h4 className="ms-2">
+                  <a href="" className="link-danger">Services
+                  </a>
+                </h4>
+                <h4 className="ms-2">
+                  <a href="" className="link-danger">About-Us
+                  </a>
+                </h4>
+                <h4 className="ms-2">
+                  <a href="" className="link-danger">Contact
+                  </a>
+                </h4>
+            </div>
+          </div>
+          <div className="row p-3">
+            <div className="col d-flex  justify-content-center socials">
+              <div className="d-flex flex-column brand">
+                <h4 className="text-center">Socials</h4>
+                <div className="con d-flex socials">
+                  <h1 className="bi bi-linkedin"></h1>
+                  <h1 className="bi bi-instagram"></h1>
+                  <h1 className="bi bi-envelope"></h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 className="text-center copy mb-2 p-3">@Bargarrey
+            <span>&copy;</span>copyrights reserved
+          </h3>
+        </div>
+
+      </footer>
     </>
   );
 }

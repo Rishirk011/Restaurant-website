@@ -3,6 +3,7 @@
     --color2:#FFA896;
     --color3:#9B1313;
     --color4:#38000A;
+    --color5:white;
 }
 .hero-section{
     background-image: linear-gradient(rgba(0,0,0,0.7)),  
@@ -22,6 +23,28 @@
 .hero-section .hero-content h1{
     font-size: 4rem;
     color: white;
+}
+.review{
+    background-color: var(--color2);
+    padding: 0.5rem;
+}
+.names-review{
+    background-color: var(--color1);
+    color: var(--color5) !important;
+}
+.socials .con{
+    color: var(--color3);
+    gap: 3rem;
+}
+.brand{
+    color: var(--color3);
+}
+.about-sec{
+    color: var(--color3);
+    text-align: center !important;
+}
+.copy{
+    color: var(--color3);
 }
 @media (max-width:400px){
 
