@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom"
+import { Link, Route, Routes } from "react-router-dom"
 export default function Navbar(){
   return <>
+
   <header>
-    <nav className="navbar navbar-dark bg-dark navbar-expand-lg position-sticky top-0">
-      <div className="container">
+    <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+      <div className="container position-sticky top-0">
         <a href="#" className="navbar-brand">BarGarreyy</a>
         <button className="navbar-toggler" type="button"
         data-bs-toggle="collapse"
@@ -12,10 +13,9 @@ export default function Navbar(){
         <ul className="navbar-nav ms-auto text-center">
           <Link to='/' className="nav-link">Home</Link>
           <Link to='/login' className="nav-link">Login</Link>
-          <Link to='cart' className="nav-link">
+          <Link to='/cart' className="nav-link">
             Cart
           </Link>
-          
         </ul>
       </div>
       </div>

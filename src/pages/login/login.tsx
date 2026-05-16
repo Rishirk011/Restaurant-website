@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { Route,Routes} from 'react-router-dom';
+import Signup from '../signup/signup';
 export default function Login(){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -9,9 +10,12 @@ export default function Login(){
     e.preventDefault();
     console.log('Submitted data:', { email, password });
   };
+    <Routes>
+    <Route path="/cart" element={<Signup/>}></Route>
+  </Routes>
 
   return (
-    <div className="container d-flex justify-content-center align-items-center min-vh-100">
+    <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 formBar">
       <div className="card p-4 shadow-sm" style={{ width: '100%', maxWidth: '400px' }}>
         <h3 className="text-center mb-4">Login</h3>
         
@@ -45,7 +49,7 @@ export default function Login(){
             <button type="submit" className="btn btn-primary me-2">
               Submit
             </button>
-            <Link to='signup.tsx'
+            <Link to='/signup'
             className='btn btn-dark'>Signup</Link>
           </div>
         </form>
