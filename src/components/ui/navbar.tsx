@@ -12,9 +12,6 @@ export default function Navbar(){
         <ul className="navbar-nav ms-auto text-center">
           <Link to='/' className="nav-link">Home</Link>
           <Link to='/login' className="nav-link">Login</Link>
-          <Link to='signup' className="nav-link">
-            Sign-up
-          </Link>
           <Link to='cart' className="nav-link">
             Cart
           </Link>
