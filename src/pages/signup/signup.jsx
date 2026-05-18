@@ -1,13 +1,7 @@
 import './signup.css'
 import { useState } from 'react'
-interface formDetails{
-    name:string;
-    email:string;
-    password:string;
-    phone:number;
-}
 export default function Signup(){
-    const [form,setForm]=useState<formDetails>(
+    const [form,setForm]=useState(
     {
         name:"",
         email:"",
@@ -24,17 +18,17 @@ export default function Signup(){
                     Sign-Up
                 </p>
                 <form action="">
-                    <div>
+                    <div className='mb-2'>
                         <label htmlFor="name" 
                         className="form-label">Name</label>
                         <input type="text" name="" id="" className="form-control"/>
                     </div>
-                    <div>
+                    <div className='mb-2'>
                         <label htmlFor="mail" 
                         className="form-label">E-mail</label>
                         <input type="email" name="mail" id="mail" className="form-control"/>
                     </div>
-                    <div>
+                    <div className='mb-2'>
                         <label htmlFor="phone" 
                         className="form-label">phone-no</label>
                         <input type="phone" name="phone" id="phone" className="form-control"/>
@@ -44,7 +38,7 @@ export default function Signup(){
                         <input type="password" name="password" id="password" className="form-control"/>
                     </div>
                 </form>
-                <div>
+                <div className='text-center'>
                     <button className="btn btn-primary">Submit</button>
                 </div>
             </div>

@@ -18,7 +18,8 @@ export default function Home() {
                 <Link to="/login" className="btn btn-primary">
                   Login
                 </Link>
-                <button className="btn btn-outline-light m-2">Shop</button>
+                <Link to='/foods'
+                className="btn btn-outline-light m-2">Shop</Link>
               </p>
             </div>
           </div>
@@ -27,8 +28,10 @@ export default function Home() {
           <h1>Featured Foods</h1>
           <div className="row g-4 justify-content-center my-3">
             <div className="col-12 col-md-6 col-lg-3">
-              <div className="card h-100 shadow shadow-md
-              shadow-dark">
+              <div
+                className="card h-100 shadow shadow-md
+              shadow-dark"
+              >
                 <p
                   className="card-title display-5
                         text-center"
@@ -51,13 +54,15 @@ export default function Home() {
               </div>
             </div>
             <div className="col-12 col-md-6 col-lg-3 ">
-              <div className="card h-100 shadow shadow-md
-              shadow-dark">
+              <div
+                className="card h-100 shadow shadow-md
+              shadow-dark"
+              >
                 <p
                   className="card-title display-5
                         text-center"
                 >
-                   Mc Veggie
+                  Mc Veggie
                 </p>
                 <div className="card-body text-center">
                   <img
@@ -74,8 +79,10 @@ export default function Home() {
               </div>
             </div>
             <div className="col-12 col-md-6 col-lg-3 text-center">
-              <div className="card h-100 shadow shadow-md
-              shadow-dark">
+              <div
+                className="card h-100 shadow shadow-md
+              shadow-dark"
+              >
                 <p
                   className="card-title display-5
                         text-center"
@@ -97,8 +104,10 @@ export default function Home() {
               </div>
             </div>
             <div className="col-12 col-md-6 col-lg-3 text-center">
-              <div className="card h-100 shadow shadow-md
-              shadow-dark">
+              <div
+                className="card h-100 shadow shadow-md
+              shadow-dark"
+              >
                 <p
                   className="card-title display-5
                         text-center"
@@ -111,7 +120,10 @@ export default function Home() {
                     alt=""
                     className="img-fluid rounded"
                   />
-                  <p>A Minnesota-born cheeseburger with cheese stuffed inside the meat patty rather than on top, creating a molten, gooey core.
+                  <p>
+                    A Minnesota-born cheeseburger with cheese stuffed inside the
+                    meat patty rather than on top, creating a molten, gooey
+                    core.
                   </p>
                   <button className="btn btn-success text-center">Add</button>
                 </div>
@@ -122,47 +134,103 @@ export default function Home() {
         <div className="container-fluid review p-5">
           <h1>Reviews</h1>
           <div className="row g-3 my-3">
-            <div className="col-12 col-md-6 col-lg-3
-            text-center">
-              <div className="card h-100 shadow shadow-md
-              shadow-dark">
+            <div
+              className="col-12 col-md-6 col-lg-3
+            text-center"
+            >
+              <div
+                className="card h-100 shadow shadow-md
+              shadow-dark"
+              >
                 <div className="card-body">
-                  <img src="/public/img/1.jpg" alt="" className="img-fluid rounded"/>
-                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">Alexa</p>
-                  <p className="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repellendus iure, dolores porro nisi facilis accusantium.</p>
+                  <img
+                    src="/public/img/1.jpg"
+                    alt=""
+                    className="img-fluid rounded"
+                  />
+                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">
+                    Alexa
+                  </p>
+                  <p className="p-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Odit repellendus iure, dolores porro nisi facilis
+                    accusantium.
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="col-12 col-md-6 col-lg-3
-            text-center">
-              <div className="card h-100 shadow shadow-md
-              shadow-dark">
+            <div
+              className="col-12 col-md-6 col-lg-3
+            text-center"
+            >
+              <div
+                className="card h-100 shadow shadow-md
+              shadow-dark"
+              >
                 <div className="card-body">
-                  <img src="/public/img/4.jpg" alt="" className="img-fluid rounded"/>
-                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">Alexa</p>
-                  <p className="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repellendus iure, dolores porro nisi facilis accusantium.</p>
+                  <img
+                    src="/public/img/4.jpg"
+                    alt=""
+                    className="img-fluid rounded"
+                  />
+                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">
+                    Alexa
+                  </p>
+                  <p className="p-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Odit repellendus iure, dolores porro nisi facilis
+                    accusantium.
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="col-12 col-md-6 col-lg-3
-            text-center">
-              <div className="card h-100 shadow shadow-md
-              shadow-dark">
+            <div
+              className="col-12 col-md-6 col-lg-3
+            text-center"
+            >
+              <div
+                className="card h-100 shadow shadow-md
+              shadow-dark"
+              >
                 <div className="card-body">
-                  <img src="/public/img/6.jpg" alt="" className="img-fluid rounded"/>
-                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">Alexa</p>
-                  <p className="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repellendus iure, dolores porro nisi facilis accusantium.</p>
+                  <img
+                    src="/public/img/6.jpg"
+                    alt=""
+                    className="img-fluid rounded"
+                  />
+                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">
+                    Alexa
+                  </p>
+                  <p className="p-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Odit repellendus iure, dolores porro nisi facilis
+                    accusantium.
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="col-12 col-md-6 col-lg-3
-            text-center">
-              <div className="card h-100 shadow shadow-md
-              shadow-dark">
+            <div
+              className="col-12 col-md-6 col-lg-3
+            text-center"
+            >
+              <div
+                className="card h-100 shadow shadow-md
+              shadow-dark"
+              >
                 <div className="card-body">
-                  <img src="/public/img/5.jpg" alt="" className="img-fluid rounded"/>
-                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">Alexa</p>
-                  <p className="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repellendus iure, dolores porro nisi facilis accusantium.</p>
+                  <img
+                    src="/public/img/5.jpg"
+                    alt=""
+                    className="img-fluid rounded"
+                  />
+                  <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">
+                    Alexa
+                  </p>
+                  <p className="p-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Odit repellendus iure, dolores porro nisi facilis
+                    accusantium.
+                  </p>
                 </div>
               </div>
             </div>
@@ -172,20 +240,25 @@ export default function Home() {
       <footer>
         <div className="container-fluid">
           <div className="row p-3">
-            <div className="col d-flex 
-            justify-content-center about-sec">
-                <h4 className="ms-2">
-                  <a href="" className="link-danger">Services
-                  </a>
-                </h4>
-                <h4 className="ms-2">
-                  <a href="" className="link-danger">About-Us
-                  </a>
-                </h4>
-                <h4 className="ms-2">
-                  <a href="" className="link-danger">Contact
-                  </a>
-                </h4>
+            <div
+              className="col d-flex 
+            justify-content-center about-sec"
+            >
+              <h4 className="ms-2">
+                <a href="" className="link-danger">
+                  Services
+                </a>
+              </h4>
+              <h4 className="ms-2">
+                <a href="" className="link-danger">
+                  About-Us
+                </a>
+              </h4>
+              <h4 className="ms-2">
+                <a href="" className="link-danger">
+                  Contact
+                </a>
+              </h4>
             </div>
           </div>
           <div className="row p-3">
@@ -200,11 +273,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <h3 className="text-center copy mb-2 p-3">@Bargarrey
+          <h3 className="text-center copy mb-2 p-3">
+            @Bargarrey
             <span>&copy;</span>copyrights reserved
           </h3>
         </div>
-
       </footer>
     </>
   );
