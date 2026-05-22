@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import "./aboutContact.css";
-
 export default function AboutContact() {
   const [formData, setFormData] = useState({
     name: "",

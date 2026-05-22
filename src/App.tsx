@@ -8,6 +8,7 @@ import Foods from "./pages/foods/foods";
 import { useNavigate } from "react-router-dom";
 import Cart from "./pages/cart/cart";
 import Summary from "./pages/summary/summary";
+import AboutContact from "./pages/about/about";
 
 export default function App() {
   return (
@@ -22,6 +23,9 @@ export default function App() {
             <Route path="/cart"
             element={<Cart/>}></Route>
             <Route path="/summary" element={<Summary/>}>
+            </Route>
+            <Route path="/about"
+            element={<AboutContact/>}>
             </Route>
           </Routes>
     </>
