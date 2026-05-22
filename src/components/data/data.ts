@@ -18,6 +18,6 @@ export const foodItemList:foodItemListType[]=[
 
     {id:5,name:"McAalo tikki",price:30,img:"/food/nine.jpeg",quantity:1},
 
-    {id:6,name:"Juicy lucy",price:200,img:"/public/food/12.jpeg",quantity:1},
+    {id:6,name:"Juicy lucy",price:200,img:"/food/12.jpeg",quantity:1},
 
 ]

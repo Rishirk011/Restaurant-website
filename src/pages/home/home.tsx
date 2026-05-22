@@ -40,7 +40,7 @@ export default function Home() {
                 </p>
                 <div className="card-body text-center">
                   <img
-                    src="/public/food/six.jpeg"
+                    src="/food/six.jpeg"
                     alt=""
                     className="img-fluid rounded"
                   />
@@ -66,7 +66,7 @@ export default function Home() {
                 </p>
                 <div className="card-body text-center">
                   <img
-                    src="/public/food/nine.jpeg"
+                    src="/food/nine.jpeg"
                     alt=""
                     className="img-fluid rounded"
                   />
@@ -91,7 +91,7 @@ export default function Home() {
                 </p>
                 <div className="card-body">
                   <img
-                    src="/public/food/one.jpeg"
+                    src="/food/one.jpeg"
                     alt=""
                     className="img-fluid rounded"
                   />
@@ -116,7 +116,7 @@ export default function Home() {
                 </p>
                 <div className="card-body">
                   <img
-                    src="/public/food/12.jpeg"
+                    src="/food/12.jpeg"
                     alt=""
                     className="img-fluid rounded"
                   />
@@ -144,7 +144,7 @@ export default function Home() {
               >
                 <div className="card-body">
                   <img
-                    src="/public/img/1.jpg"
+                    src="/img/1.jpg"
                     alt=""
                     className="img-fluid rounded"
                   />
@@ -169,7 +169,7 @@ export default function Home() {
               >
                 <div className="card-body">
                   <img
-                    src="/public/img/4.jpg"
+                    src="/img/4.jpg"
                     alt=""
                     className="img-fluid rounded"
                   />
@@ -194,7 +194,7 @@ export default function Home() {
               >
                 <div className="card-body">
                   <img
-                    src="/public/img/6.jpg"
+                    src="/img/6.jpg"
                     alt=""
                     className="img-fluid rounded"
                   />
@@ -219,7 +219,7 @@ export default function Home() {
               >
                 <div className="card-body">
                   <img
-                    src="/public/img/5.jpg"
+                    src="/img/5.jpg"
                     alt=""
                     className="img-fluid rounded"
                   />
