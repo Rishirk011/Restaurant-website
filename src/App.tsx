@@ -7,6 +7,7 @@ import Signup from "./pages/signup/signup";
 import Foods from "./pages/foods/foods";
 import { useNavigate } from "react-router-dom";
 import Cart from "./pages/cart/cart";
+import Summary from "./pages/summary/summary";
 
 export default function App() {
   return (
@@ -20,6 +21,8 @@ export default function App() {
             element={<Foods/>}></Route>
             <Route path="/cart"
             element={<Cart/>}></Route>
+            <Route path="/summary" element={<Summary/>}>
+            </Route>
           </Routes>
     </>
   );

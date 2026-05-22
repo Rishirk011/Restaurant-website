@@ -80,7 +80,9 @@ export default function Foods() {
           style={{ zIndex: "9999" }}
         >
           Product added to the cart successfully
-          <Link to='/cart'> Go to cart</Link>
+          <Link className="btn btn-success text-center mx-2 
+          d-block"
+          to='/cart'> Go to cart</Link>
         </div>
       )}
 

@@ -1,3 +1,9 @@
+.background{
+    background-image: linear-gradient(rgba(0,0,0,0.5)),url("/public/food/seven.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 .button{
     border:none;
     color: white;

@@ -1,6 +1,8 @@
 import './signup.css'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 export default function Signup(){
+    const navigate=useNavigate();
     const [form,setForm]=useState(
     {
         name:"",
@@ -39,7 +41,8 @@ export default function Signup(){
                     </div>
                 </form>
                 <div className='text-center'>
-                    <button className="btn btn-primary">Submit</button>
+                    <button className="btn btn-primary"
+                    onClick={()=>navigate('/cart')}>Submit</button>
                 </div>
             </div>
         </div>

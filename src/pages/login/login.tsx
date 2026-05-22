@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Route,Routes} from 'react-router-dom';
 import Signup from '../signup/signup';
+import { useNavigate } from 'react-router-dom';
 export default function Login(){
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -46,7 +48,8 @@ export default function Login(){
             />
           </div>
           <div className="btn-section text-center">
-            <button type="submit" className="btn btn-primary me-2">
+            <button type="submit" className="btn btn-primary me-2"
+            onClick={()=>navigate('/foods')}>
               Submit
             </button>
             <Link to='/signup'
