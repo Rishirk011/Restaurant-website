@@ -4,21 +4,23 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/login/login";
 import Signup from "./pages/signup/signup";
-import Cart from "./pages/cart/cart";
 import Foods from "./pages/foods/foods";
+import { useNavigate } from "react-router-dom";
+import Cart from "./pages/cart/cart";
+
 export default function App() {
   return (
     <>
       <Navbar />
-        <Foods>
           <Routes>
             <Route index element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/Signup" element={<Signup/>}></Route>
             <Route path="/foods"
             element={<Foods/>}></Route>
+            <Route path="/cart"
+            element={<Cart/>}></Route>
           </Routes>
-        </Foods>
     </>
   );
 }

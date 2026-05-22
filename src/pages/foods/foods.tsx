@@ -1,33 +1,32 @@
 import { useState,createContext, Children} from "react";
 import { Link } from "react-router-dom";
-
+import { foodItemList } from "../../components/data/data";
+import { useStore } from "../../store/store";
+interface food{
+  id:number;
+  name:string;
+  price:number;
+  img:string;
+  quantity:number;
+}
 export default function Foods() {
+  
   const [pop, setPop] = useState(false);
-  const [cart, setCart] = useState([]);
-  const foods = [
-    { id: 1, name: "McAalo Tikki", price: 290, img: "/public/food/six.jpeg" },
-    { id: 2, name: "whooper", price: 250, img: "/public/food/one.jpeg" },
-    { id: 3, name: "Juicy Lucy", price: 220, img: "/public/food/12.jpeg" },
-    { id: 4, name: "Fish Burger", price: 190, img: "/public/food/nine.jpeg" },
-    { id: 5, name: "Lamb Kebab", price: 300, img: "/public/food/six.jpeg" },
-    { id: 6, name: "Mc veggie", price: 200, img: "/public/food/12.jpeg" },
-  ];
 
-  function handleCart(items) {
-    setCart((item)=>{
-        const isIteminCart=item.find((item)=>item.id===items.id)
-        
-        if(isIteminCart){
-            return item.map((food)=>food.id===items.id?{...food,quantity:food.quantity+1}:food)
-        }
-        return [...item,{...items,quantity:1}]
-    }
-    )
+  const {items, add, remove, inc ,dec} =useStore();
+
+
+  function handleCart(item:food) {
+    
+    
     setPop(true);
+    
     setTimeout(() => {
       setPop(false);
     }, 2000);
-    }
+    
+    add(item)
+  }
     
     
 
@@ -43,7 +42,7 @@ export default function Foods() {
           className="row justify-content-center
             p-3 g-3"
         >
-          {foods.map((item) => (
+          {foodItemList.map((item) => (
             <div className="col-12 col-md-6 col-lg-4" key={item.id}>
               <div className="card h-100 shadow shadow-md">
                 <div className="card-body text-center">
@@ -51,19 +50,18 @@ export default function Foods() {
                     src={item.img}
                     alt=""
                     className="img-fluid
-                            rounded"
+                    rounded"
                   />
                   <p
                     className="text-center
-                            display-6
-                            "
+                    display-6"
                   >
                     {item.name}
                   </p>
                   <p className="fw-bold">price: {item.price}rs</p>
                   <button
                     className="btn btn-success text-center"
-                    onClick={() => handleCart(item)}
+                    onClick={()=>handleCart(item)}
                   >
                     Add to cart
                   </button>

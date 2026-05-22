@@ -17,13 +17,13 @@ export default function Navbar(){
           <li className="nav-item">
             <Link to='/login' className="nav-link">Login</Link>
           </li>
+          <li>
+            <Link to='/foods' className="nav-link">Foods</Link>
+          </li>
           <li className="nav-item">
             <Link to='/cart' className="nav-link">
             Cart
             </Link>
-          </li>
-          <li>
-            <Link to='/foods' className="nav-link">Foods</Link>
           </li>
         </ul>
       </div>
