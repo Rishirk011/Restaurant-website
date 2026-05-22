@@ -42,7 +42,7 @@ export default function Signup(){
                 </form>
                 <div className='text-center'>
                     <button className="btn btn-primary"
-                    onClick={()=>navigate('/cart')}>Submit</button>
+                    onClick={()=>navigate('/food')}>Submit</button>
                 </div>
             </div>
         </div>
