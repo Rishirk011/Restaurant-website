@@ -9,7 +9,7 @@ export default function Cart() {
   if(items.length<=0){
     return <>
         <div className="container-fluid min-vh-100 d-flex justify-content-center align-items-center
-        background">
+        background mx-2">
             <div className="row">
                 <div className="col text-center
                 text-light">
