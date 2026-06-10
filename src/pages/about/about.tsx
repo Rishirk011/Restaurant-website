@@ -41,7 +41,7 @@ export default function AboutContact() {
               <p className="fs-5 text-muted">
                 At BarGarreyy, we believe a burger isn’t just fast food; it's an art form. 
                 Founded with a passion for fiery grills and molten cheesy cores, we source 
-                the freshest local ingredients to craft iconic cult classics like our 
+                the freshest local ingredients to craft iconic cult classNameics like our 
                 McAloo Tikki remix and premium flame-grilled Juicy Lucys.
               </p>
               <p className="fs-5 text-muted">

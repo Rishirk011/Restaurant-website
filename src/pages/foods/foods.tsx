@@ -35,7 +35,7 @@ export default function Foods() {
       <div
         className="container-fluid min-vh-75
         position-relative"
-        style={{ width: "800px", maxWidth: "100%" }}
+        style={{ width: "800px", maxWidth: "100%", position:"relative" }}
       >
         <h1 className="text-center">Foods</h1>
         <div
@@ -74,10 +74,9 @@ export default function Foods() {
       {pop && (
         <div
           className="alert alert-success
-            position-fixed top-0
-            end-95"
+            position-sticky bottom-0 m-2"
           role="alert"
-          style={{ zIndex: "9999" }}
+          style={{ zIndex: "9999",width:"250px", height:"120px" }}
         >
           Product added to the cart successfully
           <Link className="btn btn-success text-center mx-2 

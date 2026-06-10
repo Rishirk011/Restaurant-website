@@ -46,6 +46,7 @@
 .copy{
     color: var(--color3);
 }
+
 @media (max-width:400px){
 
     .hero-content{

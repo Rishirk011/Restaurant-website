@@ -1,9 +1,9 @@
 import { useStore } from "../../store/store";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Summary() {
   const navigate = useNavigate();
-  const { items, remove, inc, dec } = useStore();
+  const { items, remove, inc, dec,clearItems } = useStore();
 
   const subtotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const tax = Math.round(subtotal * 0.18);
@@ -21,6 +21,7 @@ export default function Summary() {
     );
   }
 
+
   return (
     <div style={{ maxWidth: 420 }} className="mx-auto py-4 px-3">
 
@@ -33,14 +34,12 @@ export default function Summary() {
             idx < items.length - 1 ? "border-bottom" : ""
           }`}
         >
-          {/* Thumbnail */}
           <img
             src={item.img}
             alt={item.name}
             style={{ width: 48, height: 48, objectFit: "cover", borderRadius: 8, flexShrink: 0 }}
           />
 
-          {/* Name + qty controls */}
           <div className="flex-grow-1 overflow-hidden">
             <p className="mb-0 fw-medium text-truncate" style={{ fontSize: 14 }}>{item.name}</p>
             <small className="text-muted">₹{item.price} each</small>
@@ -67,12 +66,10 @@ export default function Summary() {
             </div>
           </div>
 
-          {/* Line price */}
           <span className="fw-medium flex-shrink-0" style={{ fontSize: 14 }}>
             ₹{(item.price * item.quantity).toLocaleString("en-IN")}
           </span>
 
-          {/* Remove */}
           <button
             className="btn btn-sm p-0 text-secondary flex-shrink-0"
             onClick={() => remove(item)}
@@ -83,7 +80,6 @@ export default function Summary() {
         </div>
       ))}
 
-      {/* Price breakdown */}
       <div className="mt-3 d-flex flex-column gap-2">
         <div className="d-flex justify-content-between" style={{ fontSize: 14 }}>
           <span className="text-secondary">Subtotal</span>
@@ -104,10 +100,10 @@ export default function Summary() {
         </div>
       </div>
 
-      <button className="btn btn-dark w-100 mt-4"
-      onClick={()=>navigate('/')}>
+      <Link className="btn btn-dark w-100 mt-4"
+      to={'/'} onClick={clearItems}>
         Place order
-      </button>
+      </Link>
 
     </div>
   );

@@ -1,6 +1,21 @@
 import "./home.css";
+import "../../components/style/imageZoom.css"
 import { Link } from "react-router-dom";
+import { foodItemListType, featuredItems } from "../../components/data/data";
+import { useStore } from "../../store/store";
+import { useState } from "react";
+
 export default function Home() {
+  const { add } = useStore();
+  const [popup, setPopup] = useState<boolean>(false);
+
+  function addToCart(item: foodItemListType) {
+    setPopup(true);
+    setTimeout(() => {
+      setPopup(false);
+    }, 4000);
+    add(item);
+  }
   return (
     <>
       <main className="container-fluid p-0">
@@ -18,8 +33,9 @@ export default function Home() {
                 <Link to="/login" className="btn btn-primary">
                   Login
                 </Link>
-                <Link to='/foods'
-                className="btn btn-outline-light m-2">Shop</Link>
+                <Link to="/foods" className="btn btn-outline-light m-2">
+                  Shop
+                </Link>
               </p>
             </div>
           </div>
@@ -27,109 +43,52 @@ export default function Home() {
         <div className="container-fluid p-5 featured-section">
           <h1>Featured Foods</h1>
           <div className="row g-4 justify-content-center my-3">
-            <div className="col-12 col-md-6 col-lg-3">
-              <div
-                className="card h-100 shadow shadow-md
-              shadow-dark"
-              >
-                <p
-                  className="card-title display-5
-                        text-center"
-                >
-                  McAloo Tikki
-                </p>
-                <div className="card-body text-center">
-                  <img
-                    src="/food/six.jpeg"
-                    alt=""
-                    className="img-fluid rounded"
-                  />
-                  <p>
-                    The ultimate cult classic in India, featuring a crispy
-                    potato and pea patty coated with special spices, onions, and
-                    eggless mayo.
-                  </p>
-                  <button className="btn btn-success text-center">Add</button>
+            {featuredItems.map((item) => (
+              <div className="col-12 col-md-6 col-lg-3" key={item.id}>
+                <div className="card h-100 shadow shadow-md">
+                  <div className="card-body text-center">
+                    <img
+                      src={item.img}
+                      alt=""
+                      className="img-fluid
+                      rounded"
+                    />
+                    <p
+                      className="text-center
+                      display-6"
+                    >
+                      {item.name}
+                    </p>
+                    <p className="fw-bold">price: {item.price}rs</p>
+                    <button
+                      className="btn btn-success text-center"
+                      onClick={() => addToCart(item)}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 ">
-              <div
-                className="card h-100 shadow shadow-md
-              shadow-dark"
-              >
-                <p
-                  className="card-title display-5
-                        text-center"
-                >
-                  Mc Veggie
-                </p>
-                <div className="card-body text-center">
-                  <img
-                    src="/food/nine.jpeg"
-                    alt=""
-                    className="img-fluid rounded"
-                  />
-                  <p>
-                    A classic loaded patty made of peas, carrots, and potatoes,
-                    topped with a flavorful, creamy sauce.
-                  </p>
-                  <button className="btn btn-success text-center">Add</button>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 text-center">
-              <div
-                className="card h-100 shadow shadow-md
-              shadow-dark"
-              >
-                <p
-                  className="card-title display-5
-                        text-center"
-                >
-                  Whopper
-                </p>
-                <div className="card-body">
-                  <img
-                    src="/food/one.jpeg"
-                    alt=""
-                    className="img-fluid rounded"
-                  />
-                  <p>
-                    Known for its flame-grilled beef patty, topped with
-                    tomatoes, lettuce, mayonnaise, ketchup, pickles, and onions.
-                  </p>
-                  <button className="btn btn-success text-center">Add</button>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 text-center">
-              <div
-                className="card h-100 shadow shadow-md
-              shadow-dark"
-              >
-                <p
-                  className="card-title display-5
-                        text-center"
-                >
-                  Juicy Lucy
-                </p>
-                <div className="card-body">
-                  <img
-                    src="/food/12.jpeg"
-                    alt=""
-                    className="img-fluid rounded"
-                  />
-                  <p>
-                    A Minnesota-born cheeseburger with cheese stuffed inside the
-                    meat patty rather than on top, creating a molten, gooey
-                    core.
-                  </p>
-                  <button className="btn btn-success text-center">Add</button>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
+          {popup && (
+            <div
+              className="alert alert-success
+            position-fixed top-0
+            end-95"
+              role="alert"
+              style={{ zIndex: "9999" }}
+            >
+              Product added to the cart successfully
+              <Link
+                className="btn btn-success text-center mx-2 
+          d-block"
+                to="/cart"
+              >
+                {" " +"Go to cart"}
+              </Link>
+            </div>
+          )}
         </div>
         <div className="container-fluid review p-5">
           <h1>Reviews</h1>
@@ -143,11 +102,7 @@ export default function Home() {
               shadow-dark"
               >
                 <div className="card-body">
-                  <img
-                    src="/img/1.jpg"
-                    alt=""
-                    className="img-fluid rounded"
-                  />
+                  <img src="/img/1.jpg" alt="" className="img-fluid rounded" />
                   <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">
                     Alexa
                   </p>
@@ -168,11 +123,7 @@ export default function Home() {
               shadow-dark"
               >
                 <div className="card-body">
-                  <img
-                    src="/img/4.jpg"
-                    alt=""
-                    className="img-fluid rounded"
-                  />
+                  <img src="/img/4.jpg" alt="" className="img-fluid rounded" />
                   <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">
                     Alexa
                   </p>
@@ -193,11 +144,7 @@ export default function Home() {
               shadow-dark"
               >
                 <div className="card-body">
-                  <img
-                    src="/img/6.jpg"
-                    alt=""
-                    className="img-fluid rounded"
-                  />
+                  <img src="/img/6.jpg" alt="" className="img-fluid rounded" />
                   <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">
                     Alexa
                   </p>
@@ -218,11 +165,7 @@ export default function Home() {
               shadow-dark"
               >
                 <div className="card-body">
-                  <img
-                    src="/img/5.jpg"
-                    alt=""
-                    className="img-fluid rounded"
-                  />
+                  <img src="/img/5.jpg" alt="" className="img-fluid rounded" />
                   <p className="card-title fw-bold my-1 d-inline-block p-2 rounded-pill names-review">
                     Alexa
                   </p>

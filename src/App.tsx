@@ -3,26 +3,37 @@ import Navbar from "./components/ui/navbar";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/login/login";
-import Signup from "./pages/signup/signup";
 import Foods from "./pages/foods/foods";
 import { useNavigate } from "react-router-dom";
 import Cart from "./pages/cart/cart";
 import Summary from "./pages/summary/summary";
 import AboutContact from "./pages/about/about";
-
+import Protected from "./pages/protectRoute/Protected";
 export default function App() {
   return (
     <>
       <Navbar />
           <Routes>
-            <Route index element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/Signup" element={<Signup/>}></Route>
             <Route path="/foods"
-            element={<Foods/>}></Route>
+              element={<Protected>
+                <Foods/>
+              </Protected>}>
+            </Route>
             <Route path="/cart"
-            element={<Cart/>}></Route>
-            <Route path="/summary" element={<Summary/>}>
+            element={
+            <Protected>
+              <Cart/>
+            </Protected>
+            }>
+
+            </Route>
+            <Route path="/summary" element={
+            <Protected>
+              <Summary/>
+            </Protected>
+            }>
             </Route>
             <Route path="/about"
             element={<AboutContact/>}>
