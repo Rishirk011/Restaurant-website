@@ -71,7 +71,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          {popup && (
+          {popup && 
             <div
               className="alert alert-success
             position-fixed top-0
@@ -87,8 +87,7 @@ export default function Home() {
               >
                 {" " +"Go to cart"}
               </Link>
-            </div>
-          )}
+            </div>}
         </div>
         <div className="container-fluid review p-5">
           <h1>Reviews</h1>

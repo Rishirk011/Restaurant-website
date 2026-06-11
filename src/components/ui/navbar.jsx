@@ -1,5 +1,7 @@
-import { Link, Navigate } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom";
+import { useStore } from "../../store/store";
 export default function Navbar(){
+  const {HandleLogout} = useStore();
   return <>
 
   <header className="sticky-top">
@@ -29,6 +31,11 @@ export default function Navbar(){
             <Link to='/about' className="nav-link">
             About-us
             </Link>
+          </li>
+          <li className="nav-item">
+            <button onClick={HandleLogout} className="btn text-white">
+              Log-Out
+            </button>
           </li>
         </ul>
       </div>
